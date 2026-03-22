@@ -3606,7 +3606,7 @@
               {
                 "min_level": 22,
                 "max_level": 25,
-                "species": "SPECIES_ELEKTRIKE"
+                "species": "SPECIES_ELECKTRIKE"
               },
               {
                 "min_level": 22,
@@ -3621,7 +3621,7 @@
               {
                 "min_level": 26,
                 "max_level": 28,
-                "species": "SPECIES_FLAFFY"
+                "species": "SPECIES_FLAAFFY"
               },
               {
                 "min_level": 31,
@@ -3631,7 +3631,7 @@
               {
                 "min_level": 31,
                 "max_level": 34,
-                "species": "SPECIES_MANETRIC"
+                "species": "SPECIES_MANECTRIC"
               },
               {
                 "min_level": 20,
@@ -4650,7 +4650,7 @@
               {
                 "min_level": 40,
                 "max_level": 40,
-                "species": "SPECIES_TREEKO"
+                "species": "SPECIES_TREECKO"
               }
             ]
           },
@@ -8670,7 +8670,7 @@
               {
                 "min_level": 13,
                 "max_level": 14,
-                "species": "SPECIES_ELEKTRIKE"
+                "species": "SPECIES_ELECKTRIKE"
               },
               {
                 "min_level": 13,
@@ -8749,7 +8749,7 @@
               {
                 "min_level": 14,
                 "max_level": 16,
-                "species": "SPECIES_ELEKTRIKE"
+                "species": "SPECIES_ELECKTRIKE"
               }
             ]
           },
@@ -9012,7 +9012,7 @@
               {
                 "min_level": 14,
                 "max_level": 14,
-                "species": "SPECIES_ELEKTRIKE"
+                "species": "SPECIES_ELECKTRIKE"
               },
               {
                 "min_level": 13,
@@ -9076,7 +9076,7 @@
               {
                 "min_level": 13,
                 "max_level": 13,
-                "species": "SPECIES_ELEKTRIKE"
+                "species": "SPECIES_ELECKTRIKE"
               },
               {
                 "min_level": 14,
@@ -9919,7 +9919,7 @@
               {
                 "min_level": 25,
                 "max_level": 25,
-                "species": "SPECIES_MANETRIC"
+                "species": "SPECIES_MANECTRIC"
               },
               {
                 "min_level": 25,
@@ -10250,7 +10250,7 @@
               {
                 "min_level": 33,
                 "max_level": 33,
-                "species": "SPECIES_CHIMECHO."
+                "species": "SPECIES_CHIMECHO"
               }
             ]
           },
@@ -11010,7 +11010,7 @@
               {
                 "min_level": 9,
                 "max_level": 9,
-                "species": "SPECIES_ELEKTRIKE"
+                "species": "SPECIES_ELECKTRIKE"
               },
               {
                 "min_level": 8,
@@ -14084,7 +14084,7 @@
               {
                 "min_level": 23,
                 "max_level": 23,
-                "species": "SPECIES_TREEKO"
+                "species": "SPECIES_TREECKO"
               }
             ],
             "encounter_rate": 21
