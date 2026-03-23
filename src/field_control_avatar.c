@@ -654,7 +654,7 @@ static bool8 TryStartStepCountScript(u16 metatileBehavior)
         return FALSE;
 
     UpdateHappinessStepCounter();
-    UpdateFarawayIslandStepCounter();
+    // UpdateFarawayIslandStepCounter();
 
     if (!(gPlayerAvatar.flags & PLAYER_AVATAR_FLAG_FORCED) && !MetatileBehavior_IsForcedMovementTile(metatileBehavior))
     {

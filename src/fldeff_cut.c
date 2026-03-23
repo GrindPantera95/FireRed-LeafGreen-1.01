@@ -18,7 +18,7 @@
 #include "constants/songs.h"
 #include "constants/metatile_labels.h"
 
-extern const u8 FarawayIsland_Interior_EventScript_HideMewWhenGrassCut[];
+// extern const u8 FarawayIsland_Interior_EventScript_HideMewWhenGrassCut[];
 
 #define CUT_GRASS_SPRITE_COUNT 8
 #define CUT_SIDE 3
@@ -297,18 +297,18 @@ static void FieldMoveCallback_CutTree(void)
     ScriptContext_Enable();
 }
 
-static void CutGrassSpriteCallbackEnd(struct Sprite *sprite)
-{
-    u8 i;
+// static void CutGrassSpriteCallbackEnd(struct Sprite *sprite)
+// {
+//     u8 i;
 
-    for (i = 1; i < CUT_SPRITE_ARRAY_COUNT; i++)
-        DestroySprite(&gSprites[sCutGrassSpriteArrayPtr[i]]);
+//     for (i = 1; i < CUT_SPRITE_ARRAY_COUNT; i++)
+//         DestroySprite(&gSprites[sCutGrassSpriteArrayPtr[i]]);
 
-    FieldEffectStop(&gSprites[sCutGrassSpriteArrayPtr[0]], FLDEFF_CUT_GRASS);
-    FREE_AND_SET_NULL(sCutGrassSpriteArrayPtr);
-    ScriptUnfreezeObjectEvents();
-    UnlockPlayerFieldControls();
+//     FieldEffectStop(&gSprites[sCutGrassSpriteArrayPtr[0]], FLDEFF_CUT_GRASS);
+//     FREE_AND_SET_NULL(sCutGrassSpriteArrayPtr);
+//     ScriptUnfreezeObjectEvents();
+//     UnlockPlayerFieldControls();
 
-    if (IsMewPlayingHideAndSeek() == TRUE)
-        ScriptContext_SetupScript(FarawayIsland_Interior_EventScript_HideMewWhenGrassCut);
-}
+//     // if (IsMewPlayingHideAndSeek() == TRUE)
+//     //     ScriptContext_SetupScript(FarawayIsland_Interior_EventScript_HideMewWhenGrassCut);
+// }
