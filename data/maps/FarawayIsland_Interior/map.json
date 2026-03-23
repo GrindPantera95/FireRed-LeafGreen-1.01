@@ -21,7 +21,7 @@
       "x": 13,
       "y": 17,
       "elevation": 3,
-      "movement_type": "MOVEMENT_TYPE_COPY_PLAYER_OPPOSITE_IN_GRASS",
+      "movement_type": "MOVEMENT_TYPE_WANDER_AROUND",
       "movement_range_x": 15,
       "movement_range_y": 15,
       "trainer_type": "TRAINER_TYPE_NONE",
