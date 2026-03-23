@@ -512,6 +512,8 @@ gStdScriptsEnd::
 	.include "data/maps/SixIsland_WaterPath_House1/scripts.inc"
 	.include "data/maps/SixIsland_WaterPath_House2/scripts.inc"
 	.include "data/maps/SevenIsland_SevaultCanyon_House/scripts.inc"
+	.include "data/maps/FarawayIsland_Exterior/scripts.inc"
+	.include "data/maps/FarawayIsland_Interior/scripts.inc"
 
 	.include "data/maps/ViridianForest/text.inc"
 	.include "data/maps/MtMoon_1F/text.inc"
