@@ -194,7 +194,7 @@
       "flag": "FLAG_HIDE_ZAPDOS"
     },
     {
-      "local_id": "LOCALID_FARAWAY_ISLAND_MEW",
+      "type": "object",
       "graphics_id": "OBJ_EVENT_GFX_MEW",
       "x": 8,
       "y": 11,
