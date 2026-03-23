@@ -8730,8 +8730,8 @@ static void DoFlaggedGroundEffects(struct ObjectEvent *objEvent, struct Sprite *
     if (objEvent->localId == LOCALID_CAMERA && objEvent->invisible)
         return;
 
-    if (ObjectEventIsFarawayIslandMew(objEvent) == TRUE && !ShouldMewShakeGrass(objEvent))
-        return;
+    // if (ObjectEventIsFarawayIslandMew(objEvent) == TRUE && !ShouldMewShakeGrass(objEvent))
+    //     return;
 
     for (i = 0; i < NELEMS(sGroundEffectFuncs); i++, flags >>= 1)
         if (flags & 1)
