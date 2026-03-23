@@ -322,6 +322,64 @@ sText_MysticTicketNoPlace:
 	.string "Please store something on your PC,\n"
 	.string "then come back for this.$"
 
+MysteryEventScript_OldSeaMap::
+	setvaddress MysteryEventScript_OldSeaMap
+	lock
+	faceplayer
+	vgoto_if_set FLAG_RECEIVED_OLD_SEA_MAP, OldSeaMap_Obtained
+	vgoto_if_set FLAG_FOUGHT_MEW, OldSeaMap_Obtained
+	checkitem ITEM_OLD_SEA_MAP, 1
+	vgoto_if_eq VAR_RESULT, TRUE, OldSeaMap_Obtained
+	vmessage sText_OldSeaMap1
+	waitmessage
+	waitbuttonpress
+	checkitemspace ITEM_OLD_SEA_MAP, 1
+	vgoto_if_eq VAR_RESULT, FALSE, OldSeaMap_Obtained_NoBagSpace
+	giveitem ITEM_OLD_SEA_MAP
+	setflag FLAG_ENABLE_SHIP_FARAWAY_ISLAND
+	setflag FLAG_RECEIVED_OLD_SEA_MAP
+	vmessage sText_OldSeaMap2
+	waitmessage
+	waitbuttonpress
+	release
+	end
+
+OldSeaMap_NoBagSpace:
+	vmessage sText_OldSeaMapNoPlace
+	waitmessage
+	waitbuttonpress
+	release
+	end
+
+OldSeaMap_Obtained:
+	vmessage sText_OldSeaMapGot
+	waitmessage
+	waitbuttonpress
+	release
+	end
+
+sText_OldSeaMap2:
+	.string "Thank you for using the MYSTERY\n"
+	.string "GIFT System.\p"
+	.string "You must be {PLAYER}.\n"
+	.string "There is a ticket here for you.$"
+
+sText_OldSeaMap1:
+	.string "It appears to be for use at the\n"
+	.string "VERMILION CITY port.\p"
+	.string "Why not give it a try and see what\n"
+	.string "it is about?$"
+
+sText_OldSeaMapGot:
+	.string "Thank you for using the MYSTERY\n"
+	.string "GIFT System.$"
+
+sText_OldSeaMapNoPlace:
+	.string "Oh, I'm sorry, {PLAYER}. Your BAG's\n"
+	.string "KEY ITEMS POCKET is full.\p"
+	.string "Please store something on your PC,\n"
+	.string "then come back for this.$"
+
 MysteryEventScript_AlteringCave::
 	setvaddress MysteryEventScript_AlteringCave
 	addvar VAR_ALTERING_CAVE_WILD_SET, 1
