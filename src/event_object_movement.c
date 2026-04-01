@@ -4304,6 +4304,42 @@ static bool8 CopyablePlayerMovement_FaceDirection(struct ObjectEvent *objectEven
     return TRUE;
 }
 
+// bool8 CopyablePlayerMovement_WalkNormal(struct ObjectEvent *objectEvent, struct Sprite *sprite, u8 playerDirection, bool8 tileCallback(u8))
+// {
+//     u32 direction;
+//     s16 x;
+//     s16 y;
+
+//     direction = playerDirection;
+//     if (ObjectEventIsFarawayIslandMew(objectEvent))
+//     {
+//         direction = GetMewMoveDirection();
+//         if (direction == DIR_NONE)
+//         {
+//             direction = playerDirection;
+//             direction = GetCopyDirection(gInitialMovementTypeFacingDirections[objectEvent->movementType], objectEvent->directionSequenceIndex, direction);
+//             ObjectEventMoveDestCoords(objectEvent, direction, &x, &y);
+//             ObjectEventSetSingleMovement(objectEvent, sprite, GetFaceDirectionMovementAction(direction));
+//             objectEvent->singleMovementActive = TRUE;
+//             sprite->sTypeFuncId = 2;
+//             return TRUE;
+//         }
+//     }
+//     else
+//     {
+//         direction = GetCopyDirection(gInitialMovementTypeFacingDirections[objectEvent->movementType], objectEvent->directionSequenceIndex, direction);
+//     }
+//     ObjectEventMoveDestCoords(objectEvent, direction, &x, &y);
+//     ObjectEventSetSingleMovement(objectEvent, sprite, GetWalkNormalMovementAction(direction));
+
+//     if (GetCollisionAtCoords(objectEvent, x, y, direction) || (tileCallback != NULL && !tileCallback(MapGridGetMetatileBehaviorAt(x, y))))
+//         ObjectEventSetSingleMovement(objectEvent, sprite, GetFaceDirectionMovementAction(direction));
+
+//     objectEvent->singleMovementActive = TRUE;
+//     sprite->sTypeFuncId = 2;
+//     return TRUE;
+// }
+
 static bool8 CopyablePlayerMovement_GoSpeed0(struct ObjectEvent *objectEvent, struct Sprite *sprite, u8 playerDirection, bool8 tileCallback(u8))
 {
     u32 direction;
@@ -8693,6 +8729,9 @@ static void DoFlaggedGroundEffects(struct ObjectEvent *objEvent, struct Sprite *
 
     if (objEvent->localId == LOCALID_CAMERA && objEvent->invisible)
         return;
+
+    // if (ObjectEventIsFarawayIslandMew(objEvent) == TRUE && !ShouldMewShakeGrass(objEvent))
+    //     return;
 
     for (i = 0; i < NELEMS(sGroundEffectFuncs); i++, flags >>= 1)
         if (flags & 1)
